@@ -113,3 +113,48 @@ Boxは不可視のコンテナでその中には複数のウィジェットを�
 ### 5.4.1 例
 
 [ListBox Example](listbox_example.py)
+
+## 5.5 Stackと StackSwitcher
+
+`Gtk.Stack`は一度に一つの子のみを表示するコンテナです.
+`Gtk.Notebook`とは対照的に `Gtk.Stack`はユーザに, 可視できる
+子を変更する方法を提供しません. 変わりに `Gtk.StackSwitcher`は,
+`Gtk.Stack`と共に使うことで, その目的を実現することができます.
+
+ページ間の遷移では, スライドやフェードとしてアニメーションをつける
+ことができます. これは `Gtk.Stack.set_transition_type()`により,
+制御することができます.
+
+制御速度は `Gtk.Stack.set_transition_duration()`により調整できます.
+
+`Gtk.StackSwitcher`ウィジェットは `Gtk.Stack`のコントローラとして
+振る舞い, 関連する stackウィジェットの様々なページを切り替えるための
+ボタンを表示します.
+
+すべてのボタンの内容は `Gtk.Stack`の子プロパティに由来します.
+
+一つの `Gtk.Stack`ウィジェットに複数の `Gtk.StackSwitcher`を
+関連付けることが可能です.
+
+### 5.5.1 例
+
+[Stack Example](stack_example.py)
+
+## 5.6 HeaderBar
+
+`Gtk.HeaderBar`は水平方向の `Gtk.Box`に似ており, 子要素を開始地点から
+終了地点に向かって配置することができます. 加えて, タイトルを表示する
+ことも可能です. タイトルはボックスの幅に応じて中央寄せさせられます.
+それは各子要素が異なる幅をとっている場合でも機能します.
+
+Gtk+はクライアントサイドの装飾をサポートしているため, `Gtk.HeaderBar`は
+タイトルバーの変わりに使うこともできます(この場合はウインドウマネージャに
+より描画されます).
+
+`Gtk.HeaderBar`は通常ウインドウの上部に配置され, 下に置かれるコンテンツの
+制御に使われるものを含むべきです. ウインドウ制御, ウインドウを閉じる,
+ウインドウメニューなどがあります.
+
+### 5.6.1 例
+
+[HeaderBar Example](headerbar_example.py)
