@@ -26,15 +26,15 @@ class ListBoxWindow(Gtk.Window):
         vbox.pack_start(label2, True, True, 0)
 
         switch = Gtk.Switch()
-        switch.props.valigh = Gtk.Aligh.CENTER
+        switch.props.valign = Gtk.Align.CENTER
         hbox.pack_start(switch, False, True, 0)
 
         listbox.add(row)
 
         row = Gtk.ListBoxRow()
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=50)
-        row.add(hox)
-        label = Gtk.label("Enable Automatic Update", xaligh=0)
+        row.add(hbox)
+        label = Gtk.Label("Enable Automatic Update", xalign=0)
         check = Gtk.CheckButton()
         hbox.pack_start(label, True, True, 0)
         hbox.pack_start(check, False, True, 0)
@@ -44,7 +44,7 @@ class ListBoxWindow(Gtk.Window):
         row = Gtk.ListBoxRow()
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=50)
         row.add(hbox)
-        label = Gtk.Label("Date Format", xaligh=0)
+        label = Gtk.Label("Date Format", xalign=0)
         combo = Gtk.ComboBoxText()
         combo.insert(0, "0", "24-hour")
         combo.insert(1, "1", "AM/PM")
